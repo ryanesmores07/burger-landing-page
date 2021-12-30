@@ -92,3 +92,24 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-3);
 }
+
+.btn {
+  text-transform: uppercase;
+  background: orange;
+  color: var(--clr-primary-9);
+  padding: 0.6rem 1rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-size: 1.2rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+.btn:hover {
+  color: var(--clr-primary-1);
+  background: var(--clr-primary-8);
+}

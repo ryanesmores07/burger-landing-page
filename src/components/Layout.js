@@ -17,14 +17,14 @@ const Layout = ({ children }) => {
 export default Layout
 
 const Container = styled.main`
-  background-color: var(--clr-primary-10);
+  background-color: var(--clr-primary-8);
 
   /* height: 100vh; */
   padding: 3rem;
 `
 
 const SectionCenter = styled.section`
-  background-color: var(--clr-primary-8);
+  background-color: var(--clr-primary-10);
   border-radius: 30px;
   border: 0.1rem solid red;
   width: 90vw;
