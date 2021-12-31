@@ -8,21 +8,20 @@ const Navbar = () => {
   return (
     <NavContainer>
       <div className="logo">
-        <StaticImage src="../../static/burger.png" alt="logo" className="img" />
+        <StaticImage src="../../static/burger.png" alt="logo" />
       </div>
 
-      <section className="center">
-        <div className="nav-links">
-          {links.map(link => {
-            const { id, text, url } = link
-            return (
-              <Link className="link" to={url} key={id}>
-                {text}
-              </Link>
-            )
-          })}
-        </div>
-      </section>
+      <div className="nav-links">
+        {links.map(link => {
+          const { id, text, url } = link
+          return (
+            <Link className="link" to={url} key={id}>
+              {text}
+            </Link>
+          )
+        })}
+      </div>
+
       <div className="btn-login">
         <button className="btn">Login</button>
       </div>
@@ -35,43 +34,32 @@ const NavContainer = styled.nav`
   display: flex;
   padding: 1rem 2rem;
   background-color: transparent;
-  text-align: center;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
 
-  .center {
-    /* display: flex; */
-    /* justify-content: center; */
-    margin-right: 2rem;
-    margin: 0 auto;
-    font-size: 2rem;
-    align-self: center;
-  }
-
-  .logo {
-    padding-left: 10rem;
-  }
-
-  .btn-login {
-    align-self: center;
-    padding: 1rem 2rem;
-    padding-right: 8rem;
-  }
-
-  .img {
-    width: 8rem;
-  }
-
-  .link {
-    margin-right: 2.5rem;
-  }
   .nav-links {
+    display: flex;
+    align-content: flex-end;
+    align-items: center;
+    /* background-color: red; */
     font-size: 2rem;
-
-    align-self: center;
+    .link {
+      margin: 0 2.5rem;
+    }
   }
   .nav-links a:hover {
     color: var(--clr-primary-5);
     box-shadow: 0px 2px var(--clr-primary-5);
+  }
+
+  .logo {
+    align-self: center;
+    margin-left: 8rem;
+    width: 7rem;
+  }
+
+  .btn-login {
+    margin-right: 8rem;
   }
 
   .btn {

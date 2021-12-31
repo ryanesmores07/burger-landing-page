@@ -1,14 +1,34 @@
 import React from "react"
 import styled from "styled-components"
 import links from "../constants/links"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Content from "../components/Content"
+import Menus from "../components/Menus"
 
-export default function Home() {
-  return <Container></Container>
+export default function Home({
+  data: {
+    info: { nodes: data },
+  },
+}) {
+  return (
+    <>
+      <Content />
+      <Menus data={data} />
+    </>
+  )
 }
 
-const Container = styled.main`
-  /* background-color: var(--clr-primary-10);
-  width: 100vw;
-  height: 100vh; */
+export const query = graphql`
+  {
+    info: allContentfulBurger {
+      nodes {
+        name
+        price
+        rating
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+        }
+      }
+    }
+  }
 `
