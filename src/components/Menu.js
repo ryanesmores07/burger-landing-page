@@ -8,14 +8,16 @@ const Menu = ({ item, index }) => {
   return (
     <MenuContainer>
       <GatsbyImage image={getImage(image)} alt="name" className="img" />
+      <h2>{name}</h2>
+      <h4>{rating}</h4>
+      <h3>{price}</h3>
     </MenuContainer>
   )
 }
 
 const MenuContainer = styled.article`
-  width: 30rem;
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  text-align: center;
+  border: 1px solid red;
 
   .img {
     width: 10rem;

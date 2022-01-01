@@ -7,35 +7,38 @@ const Menus = ({ data }) => {
   console.log(data)
   return (
     <MenuContainer>
-      <div className="grid-container">
-        <div className="heading">
-          <h2>A special burger in a special mood</h2>
-        </div>
-        <div className="menu-list">
-          {data.map((item, index) => {
-            return <Menu item={item} key={index} />
-          })}
-        </div>
+      <div className="heading">
+        <h2>A special burger in a special mood</h2>
+      </div>
+      <div className="menu-list">
+        {data.map((item, index) => {
+          return <Menu item={item} key={index} />
+        })}
       </div>
     </MenuContainer>
   )
 }
 
 const MenuContainer = styled.section`
-  margin: 3rem 6rem;
-  padding: 0 2rem;
+  background-color: var(--clr-grey-9);
+  width: 100%;
+  margin: 7rem auto;
+  padding: 7rem 0;
 
-  .grid-container {
+  .menu-list {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 1rem 4rem;
   }
 
   .heading {
-    grid-row: 1 /2;
-  }
+    width: 50rem;
+    margin-bottom: 3rem;
 
-  .menu-list {
-    grid-row: 2/3;
+    h2 {
+      text-transform: uppercase;
+    }
   }
 `
 export default Menus
