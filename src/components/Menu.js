@@ -27,7 +27,9 @@ const Menu = ({ item, index }) => {
 
 const MenuContainer = styled.article`
   text-align: center;
-  border: 1px solid red;
+  border: 1px solid var(--clr-grey-1);
+  /* border-radius: 50px; */
+  margin-bottom: 0.5rem;
   position: relative;
 
   .container {

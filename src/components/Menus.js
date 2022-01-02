@@ -8,7 +8,7 @@ const Menus = ({ data }) => {
   return (
     <MenuContainer>
       <div className="title">
-        <h2>A special burger for a special mood</h2>
+        <h2>A special burger for your special mood</h2>
       </div>
       <div className="grid-container">
         <div className="grid-items">
@@ -48,6 +48,12 @@ const MenuContainer = styled.section`
     width: 50rem;
     margin: 0 4rem;
     text-align: center;
+    color: var(--clr-primary-1);
+
+    &:hover {
+      transform: skewY(3deg);
+      transition: all 0.1s linear;
+    }
 
     h2 {
       text-transform: uppercase;

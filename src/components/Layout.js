@@ -3,6 +3,7 @@ import "../assets/css/main.css"
 import Navbar from "./Navbar"
 import styled from "styled-components"
 import Content from "./Content"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
         <Navbar />
 
         {children}
+        <Footer />
       </SectionCenter>
     </Container>
   )
@@ -19,7 +21,7 @@ const Layout = ({ children }) => {
 export default Layout
 
 const Container = styled.main`
-  background-color: var(--clr-grey-5);
+  background-color: var(--clr-primary-3);
 
   padding: 3rem;
 `
@@ -29,8 +31,9 @@ const SectionCenter = styled.section`
   /* background-color: var(--clr-grey-10); */
   background-color: #fff;
   border-radius: 30px;
-  border: 0.1rem solid red;
+  /* border: 0.1rem solid red; */
   width: 90vw;
+  z-index: 10;
 
   margin: 0 auto;
 `

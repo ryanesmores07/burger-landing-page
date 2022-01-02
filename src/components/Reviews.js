@@ -7,40 +7,95 @@ const Reviews = () => {
   const [index, setIndex] = useState(0)
   const { name, job, image, text } = people[index]
 
+  const checkNumber = number => {
+    if (number > people.length - 1) {
+      return 0
+    }
+    if (number < 0) {
+      return people.length - 1
+    }
+    return number
+  }
+
+  const nextPerson = () => {
+    setIndex(index => {
+      let newIndex = index + 1
+      return checkNumber(newIndex)
+    })
+  }
+
+  const prevPerson = () => {
+    setIndex(index => {
+      let newIndex = index - 1
+      return checkNumber(newIndex)
+    })
+  }
+
+  const randomPerson = () => {
+    let random = Math.floor(Math.random() * people.length)
+    if (random === index) {
+      random = index + 1
+    }
+    setIndex(checkNumber(random))
+  }
+
   return (
     <ReviewContainer>
-      <div className="img-container">
-        <img src={image} alt={name} className="person-img" />
-        <span className="quote-icon">
-          <FaQuoteRight className="icon" />
-        </span>
+      <div className="title">
+        <h2>review from our happy customers</h2>
       </div>
-      <h2 className="author">{name}</h2>
-      {/* <p className="job">{job}</p> */}
-      <p className="info">{text}</p>
-      <div className="button-container">
-        <button className="prev-btn">
-          <FaChevronLeft />
+
+      <article className="review">
+        <div className="img-container">
+          <img src={image} alt={name} className="person-img" />
+          <span className="quote-icon">
+            <FaQuoteRight className="icon" />
+          </span>
+        </div>
+        <h2 className="author">{name}</h2>
+        {/* <p className="job">{job}</p> */}
+        <p className="info">{text}</p>
+        <div className="button-container">
+          <button className="prev-btn" onClick={prevPerson}>
+            <FaChevronLeft />
+          </button>
+          <button className="next-btn" onClick={nextPerson}>
+            <FaChevronRight />
+          </button>
+        </div>
+        <button className="random-btn" onClick={randomPerson}>
+          random review
         </button>
-        <button className="next-btn">
-          <FaChevronRight />
-        </button>
-      </div>
-      <button className="random-btn">surprise me</button>
+      </article>
     </ReviewContainer>
   )
 }
 
 const ReviewContainer = styled.article`
-  background: var(--clr-white);
-  padding: 1.5rem 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
-  transition: var(--transition);
-  text-align: center;
-  margin: 0 auto;
-  place-items: center;
-  width: 50%;
+  /* height: 70vh; */
+  padding: 3rem;
+  margin-bottom: 5rem;
+
+  .title {
+    color: var(--clr-red-light);
+    text-align: center;
+    margin-bottom: 3rem;
+    &:hover {
+      transform: skewY(3deg);
+      transition: all 0.1s linear;
+    }
+  }
+  .review {
+    background: var(--clr-primary-9);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
+    text-align: center;
+    margin: 0 auto;
+    place-items: center;
+    width: 30%;
+  }
 
   .img-container {
     position: relative;

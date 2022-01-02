@@ -32,7 +32,7 @@ const Navbar = () => {
 const NavContainer = styled.nav`
   margin-top: 3rem;
   display: flex;
-  padding: 1rem 2rem;
+  padding: 3rem 2rem;
   background-color: transparent;
   justify-content: space-between;
   align-items: center;
