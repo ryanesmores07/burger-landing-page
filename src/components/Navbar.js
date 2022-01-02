@@ -16,7 +16,7 @@ const Navbar = () => {
           const { id, text, url } = link
           return (
             <Link className="link" to={url} key={id}>
-              {text}
+              <h3>{text}</h3>
             </Link>
           )
         })}
@@ -54,12 +54,12 @@ const NavContainer = styled.nav`
 
   .logo {
     align-self: center;
-    margin-left: 8rem;
+    margin-left: 14rem;
     width: 7rem;
   }
 
   .btn-login {
-    margin-right: 8rem;
+    margin-right: 14rem;
   }
 
   .btn {

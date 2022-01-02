@@ -26,7 +26,8 @@ const Container = styled.main`
 
 const SectionCenter = styled.section`
   display: block;
-  background-color: var(--clr-grey-10);
+  /* background-color: var(--clr-grey-10); */
+  background-color: #fff;
   border-radius: 30px;
   border: 0.1rem solid red;
   width: 90vw;

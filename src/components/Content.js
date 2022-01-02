@@ -32,7 +32,7 @@ const Content = () => {
           />
         </div>
         <div className="information">
-          <h1>Best quality burgers just for you</h1>
+          <h1>Best quality burgers for everybody</h1>
           <p>
             We prioritize quality in each of our burgers, below are the
             advantages of our burgers:

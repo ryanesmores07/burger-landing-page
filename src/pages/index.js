@@ -4,6 +4,7 @@ import links from "../constants/links"
 import { Link, graphql } from "gatsby"
 import Content from "../components/Content"
 import Menus from "../components/Menus"
+import Reviews from "../components/Reviews"
 
 export default function Home({
   data: {
@@ -14,6 +15,7 @@ export default function Home({
     <>
       <Content />
       <Menus data={data} />
+      <Reviews />
     </>
   )
 }
