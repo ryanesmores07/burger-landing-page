@@ -17,9 +17,9 @@ const Menus = ({ data }) => {
           })}
         </div>
       </div>
-      <button type="button" className="btn">
+      <Link to="/menu" type="button" className="btn">
         See full menu
-      </button>
+      </Link>
     </MenuContainer>
   )
 }

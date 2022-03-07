@@ -100,7 +100,7 @@ const ContentContainer = styled.header`
     .image {
       height: 30vw;
       width: 50vh;
-      border-radius: 30px;
+      /* border-radius: 30px; */
     }
   }
 
