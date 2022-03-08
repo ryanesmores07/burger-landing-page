@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const Footer = () => {
   return (
@@ -21,31 +22,31 @@ const Footer = () => {
       <section className="page-section">
         <h3>page</h3>
         <ul>
-          <li>About us</li>
+          <Link to="/">About us</Link>
         </ul>
         <ul>
-          <li>Career</li>
+          <Link to="/">Career</Link>
         </ul>
         <ul>
-          <li>Pricing</li>
+          <Link to="/">Pricing</Link>
         </ul>
         <ul>
-          <li>Blog</li>
+          <Link to="/">Blog</Link>
         </ul>
       </section>
       <section className="service-section">
         <h3>our service</h3>
         <ul>
-          <li>Help center</li>
+          <Link to="/">Help center</Link>
         </ul>
         <ul>
-          <li>FAQ</li>
+          <Link to="/">FAQ</Link>
         </ul>
         <ul>
-          <li>Transaction</li>
+          <Link to="/">Transaction</Link>
         </ul>
         <ul>
-          <li>Delivery</li>
+          <Link to="/">Delivery</Link>
         </ul>
       </section>
       <section className="subscribe-section">
