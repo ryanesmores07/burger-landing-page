@@ -1,15 +1,15 @@
 import React from "react"
 import styled from "styled-components"
-import Menu from "../components/Menu"
+
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import { Title, Menu } from "../components"
 
 const Menus = ({ data }) => {
   return (
     <MenuContainer>
-      <div className="title">
-        <h2>A special burger for your special mood</h2>
-      </div>
+      <Title title="A special burger for your special mood" />
+
       <div className="grid-container">
         <div className="grid-items">
           {data.map((item, index) => {

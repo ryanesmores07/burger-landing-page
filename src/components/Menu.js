@@ -65,7 +65,7 @@ const MenuContainer = styled.article`
   .container:hover .overlay {
     bottom: 0;
     height: 100%;
-    background: rgba(255, 216, 168, 0.5);
+    background: rgba(90, 90, 90, 0.8);
   }
 
   .text {

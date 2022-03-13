@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import people from "../data"
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa"
 import styled from "styled-components"
+import Title from "../components/Title"
 
 const Reviews = () => {
   const [index, setIndex] = useState(0)
@@ -41,9 +42,7 @@ const Reviews = () => {
 
   return (
     <ReviewContainer>
-      <div className="title">
-        <h2>review from our happy customers</h2>
-      </div>
+      <Title title="review from our happy customers" />
 
       <article className="review">
         <div className="img-container">
@@ -74,17 +73,10 @@ const Reviews = () => {
 const ReviewContainer = styled.article`
   /* height: 70vh; */
   padding: 3rem;
-  margin-bottom: 5rem;
 
-  .title {
-    color: var(--clr-red-light);
-    text-align: center;
-    margin-bottom: 3rem;
-    &:hover {
-      transform: skewY(3deg);
-      transition: all 0.1s linear;
-    }
-  }
+  display: grid;
+  place-items: center;
+
   .review {
     background: var(--clr-primary-9);
     padding: 1.5rem 2rem;
@@ -92,7 +84,7 @@ const ReviewContainer = styled.article`
     box-shadow: var(--light-shadow);
     transition: var(--transition);
     text-align: center;
-    margin: 0 auto;
+    margin: 5rem auto;
     place-items: center;
     width: 30%;
   }
