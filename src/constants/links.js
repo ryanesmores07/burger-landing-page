@@ -6,8 +6,8 @@ const data = [
   },
   {
     id: 2,
-    text: "Tracking",
-    url: "/tracking/",
+    text: "Menu",
+    url: "/menu/",
   },
   {
     id: 3,

@@ -29,7 +29,7 @@ const MenuContainer = styled.section`
   width: 100%;
   display: grid;
   place-items: center;
-  margin: 7rem auto;
+  margin: 0 auto;
   padding: 10rem 0;
 
   .grid-container {
@@ -38,7 +38,7 @@ const MenuContainer = styled.section`
     place-items: center;
     grid-gap: 2rem;
     grid-template-columns: 7% repeat(3, 1fr) 7%;
-    margin: 3rem 7%;
+    margin-bottom: 5rem;
   }
 
   .grid-items {

@@ -84,7 +84,7 @@ const ReviewContainer = styled.article`
     box-shadow: var(--light-shadow);
     transition: var(--transition);
     text-align: center;
-    margin: 5rem auto;
+    margin: 0 auto;
     place-items: center;
     width: 30%;
   }

@@ -11,7 +11,8 @@ const Title = ({ title }) => {
 
 const TitleWrapper = styled.div`
   width: 50rem;
-  margin: 0 4rem;
+
+  margin: 5rem auto;
   text-align: center;
   color: var(--clr-primary-1);
 

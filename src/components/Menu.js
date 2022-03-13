@@ -59,17 +59,17 @@ const MenuContainer = styled.article`
     overflow: hidden;
     width: 100%;
     height: 0;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
 
   .container:hover .overlay {
     bottom: 0;
     height: 100%;
-    background: rgba(90, 90, 90, 0.8);
+    background: rgba(255, 165, 0, 0.4);
   }
 
   .text {
-    white-space: nowrap;
+    /* white-space: nowrap; */
     color: white;
     font-size: 20px;
     position: absolute;
