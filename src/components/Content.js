@@ -78,7 +78,7 @@ const ContentContainer = styled.header`
   .grid-container {
     margin-bottom: 5rem;
     display: grid;
-    grid-template-columns: 7% 1fr 1fr 7%;
+    grid-template-columns: 7% repeat(auto-fit, minmax(20rem, 1fr)) 7%;
     align-items: center;
     justify-items: center;
   }
@@ -98,17 +98,19 @@ const ContentContainer = styled.header`
     justify-self: end;
 
     .image {
-      height: 30vw;
-      width: 50vh;
+      object-fit: cover;
+
+      height: 50rem;
+      width: 30vw;
       /* border-radius: 30px; */
     }
   }
 
   .grid-container:nth-of-type(even) {
-    grid-template-columns: 7% 1fr 1fr 7%;
+    grid-template-columns: 7% repeat(auto-fit, minmax(20rem, 1fr)) 7%;
   }
   .grid-container:nth-of-type(even) .information {
-    justify-self: center;
+    /* justify-self: center; */
     grid-column: 3/ 4;
 
     button {
