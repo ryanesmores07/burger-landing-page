@@ -2,15 +2,17 @@ import React from "react"
 import "../assets/css/main.css"
 import styled from "styled-components"
 import { Footer, Navbar } from "../components"
+import { AppProvider } from "../pages/context"
 
 const Layout = ({ children }) => {
   return (
     <Container>
       <SectionCenter>
-        <Navbar />
-
-        {children}
-        <Footer />
+        <AppProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </AppProvider>
       </SectionCenter>
     </Container>
   )

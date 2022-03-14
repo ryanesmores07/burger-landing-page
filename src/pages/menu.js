@@ -28,7 +28,7 @@ const Menu = () => {
           console.log(item.image)
           return (
             <>
-              <Link to={`/menu/${name}`}>
+              <Link to="/">
                 <div className="menu-card" key={index}>
                   <img src={item.image} alt="burger" className="img-burger" />
                   <div className="burger-info">
