@@ -2,7 +2,7 @@ import React from "react"
 import "../assets/css/main.css"
 import styled from "styled-components"
 import { Footer, Navbar } from "../components"
-import { AppProvider } from "../pages/context"
+import { AppProvider } from "../context"
 
 const Layout = ({ children }) => {
   return (
@@ -10,6 +10,7 @@ const Layout = ({ children }) => {
       <SectionCenter>
         <AppProvider>
           <Navbar />
+
           {children}
           <Footer />
         </AppProvider>
@@ -27,7 +28,6 @@ const Container = styled.main`
 `
 
 const SectionCenter = styled.section`
-  display: block;
   /* background-color: var(--clr-grey-10); */
   background-color: #fff;
   border-radius: 30px;

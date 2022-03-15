@@ -2,41 +2,42 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { Title } from "../components"
+import { useGlobalContext } from "../context"
 
 const Menu = () => {
-  const [items, setItems] = useState([])
+  // const [items, setItems] = useState([])
 
-  const fetchData = async () => {
-    const response = await fetch(
-      "https://ryan-burger-api.herokuapp.com/burgers"
-    )
-    const burgers = await response.json()
+  // const fetchData = async () => {
+  //   const response = await fetch(
+  //     "https://ryan-burger-api.herokuapp.com/burgers"
+  //   )
+  //   const burgers = await response.json()
 
-    return setItems(burgers)
-  }
-  useEffect(() => {
-    const fetch = fetchData()
-  }, [])
+  //   return setItems(burgers)
+  // }
+  // useEffect(() => {
+  //   fetchData()
+  // }, [])
   // console.log(items[0])
+
+  const { items } = useGlobalContext()
 
   return (
     <>
       <Title title="Full burger menu" />
       <MenuContainer>
         {items.map((item, index) => {
-          const { name, description, image, ingredients } = item
-          console.log(item.image)
+          const { name, description, image, ingredients, id } = item
+
           return (
-            <>
-              <Link to="/">
-                <div className="menu-card" key={index}>
-                  <img src={item.image} alt="burger" className="img-burger" />
-                  <div className="burger-info">
-                    <h2>{name}</h2>
-                  </div>
+            <Link to={`/menu/singleburger/${id}`} key={id}>
+              <div className="menu-card" key={index}>
+                <img src={item.image} alt="burger" className="img-burger" />
+                <div className="burger-info">
+                  <h2>{name}</h2>
                 </div>
-              </Link>
-            </>
+              </div>
+            </Link>
           )
         })}
       </MenuContainer>

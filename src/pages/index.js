@@ -5,7 +5,6 @@ import { Link, graphql } from "gatsby"
 import Content from "../components/Content"
 import Menus from "../components/Menus"
 import Reviews from "../components/Reviews"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 export default function Home({
   data: {
@@ -15,7 +14,9 @@ export default function Home({
   return (
     <>
       <Content />
+
       <Menus data={data} />
+
       <Reviews />
     </>
   )

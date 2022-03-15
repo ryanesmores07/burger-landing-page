@@ -8,7 +8,7 @@ const Menu = ({ item, index }) => {
   const { name, price, rating, image } = item
   return (
     <MenuContainer>
-      <div className="container">
+      <div className="container" key={index}>
         <GatsbyImage image={getImage(image)} alt="name" className="img" />
         <div className="overlay">
           <div className="text">
