@@ -30,7 +30,7 @@ const Menu = () => {
           const { name, description, image, ingredients, id } = item
 
           return (
-            <Link to={`/menu/singleburger/${id}`} key={id}>
+            <Link to={`/menu/singleburger/`} key={id}>
               <div className="menu-card" key={index}>
                 <img src={item.image} alt="burger" className="img-burger" />
                 <div className="burger-info">
