@@ -11,7 +11,7 @@ const AppProvider = ({ children }) => {
     try {
       const response = await fetch(url)
       const data = await response.json()
-
+      const items = data.forEach(item => {})
       return setItems(data)
     } catch (error) {
       console.log(error)
@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     fetchData()
   }, [])
-  // console.log(items[0])
+
   return <AppContext.Provider value={{ items }}>{children}</AppContext.Provider>
 }
 // make sure use

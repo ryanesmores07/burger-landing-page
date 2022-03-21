@@ -3,6 +3,7 @@ import "../assets/css/main.css"
 import styled from "styled-components"
 import { Footer, Navbar } from "../components"
 import { AppProvider } from "../context"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 const Layout = ({ children }) => {
   return (
@@ -10,7 +11,6 @@ const Layout = ({ children }) => {
       <SectionCenter>
         <AppProvider>
           <Navbar />
-
           {children}
           <Footer />
         </AppProvider>

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const gridpractice = () => {
+const GridPractice = () => {
   return (
     <Container>
       <div className="item item-1">Orange</div>
@@ -16,7 +16,7 @@ const gridpractice = () => {
   )
 }
 
-export default gridpractice
+export default GridPractice
 
 const Container = styled.section`
   background-color: #eee;

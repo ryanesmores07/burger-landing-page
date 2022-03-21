@@ -3,23 +3,12 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { Title } from "../components"
 import { useGlobalContext } from "../context"
+import Burger from "../components/Burger"
+import SoloBurger from "../modules/SoloBurger"
+
+import { Router as MyRouter } from "@reach/router"
 
 const Menu = () => {
-  // const [items, setItems] = useState([])
-
-  // const fetchData = async () => {
-  //   const response = await fetch(
-  //     "https://ryan-burger-api.herokuapp.com/burgers"
-  //   )
-  //   const burgers = await response.json()
-
-  //   return setItems(burgers)
-  // }
-  // useEffect(() => {
-  //   fetchData()
-  // }, [])
-  // console.log(items[0])
-
   const { items } = useGlobalContext()
 
   return (
@@ -30,14 +19,17 @@ const Menu = () => {
           const { name, description, image, ingredients, id } = item
 
           return (
-            <Link to={`/menu/singleburger/`} key={id}>
+            <Link to={`/menu/${id}`} key={id}>
               <div className="menu-card" key={index}>
                 <img src={item.image} alt="burger" className="img-burger" />
                 <div className="burger-info">
-                  <h2>{name}</h2>
+                  <h3>{name}</h3>
                 </div>
               </div>
             </Link>
+            // <section className="menu-card">
+            //   <Burger key={item.id} {...item}></Burger>
+            // </section>
           )
         })}
       </MenuContainer>
@@ -86,3 +78,15 @@ const MenuContainer = styled.section`
 `
 
 export default Menu
+
+/*
+
+
+<MyRouter>
+      <SoloBurger items={items} path="/menu/solo-burger" />
+    </MyRouter>
+
+    <section className="menu-card">
+              <Burger key={item.id} {...item}></Burger>
+            </section>
+*/
