@@ -8,7 +8,7 @@ import Burger from "../components/Burger"
 const RouterOne = () => {
   return (
     <Router>
-      <SoloBurger path="/menu/:id" children={<SoloBurger />} />
+      <SoloBurger path="/menu/:id" />
     </Router>
   )
 }
