@@ -73,24 +73,28 @@ const SoloBurger: React.FC<Props> = ({ id }) => {
 
 const Wrapper = styled.article`
   /* background-color: yellow; */
-  height: 70vh;
+  /* height: 50rem; */
+  max-width: 100vw;
 
   .grid-container {
     /* background-color: lightblue; */
+    /* height: 20rem; */
     display: grid;
     place-items: center;
-    width: 60vw;
-    height: 100%;
+    background-color: var(--clr-grey-10);
+    /* width: 60vw; */
 
     margin: 0 auto;
     grid-template-columns: repeat(2, minmax(25rem, 1fr));
     align-items: center;
     justify-items: start;
   }
+
   .img-burger {
     object-fit: cover;
     width: 100%;
-    height: 60vh;
+    height: 50vw;
+    /* height: 100%; */
     cursor: pointer;
 
     &:hover {
