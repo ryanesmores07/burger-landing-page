@@ -39,6 +39,16 @@ const MenuContainer = styled.section`
     grid-gap: 2rem;
     grid-template-columns: 7% repeat(3, 1fr) 7%;
     margin-bottom: 5rem;
+
+    @media (max-width: 980px) {
+      display: block;
+    }
+
+    @media (max-width: 790px) {
+      width: 80vw;
+
+      display: block;
+    }
   }
 
   .grid-items {
@@ -57,6 +67,11 @@ const MenuContainer = styled.section`
 
     h2 {
       text-transform: uppercase;
+    }
+  }
+  .btn {
+    @media (max-width: 790px) {
+      font-size: 2rem;
     }
   }
 `

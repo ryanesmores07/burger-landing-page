@@ -1,11 +1,21 @@
 import React, { useState, useContext, useEffect } from "react"
 import { useCallback } from "react"
+import links from "./constants/links"
 
 const url = "https://ryan-burger-api.herokuapp.com/burgers"
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
   const [items, setItems] = useState([])
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const [linkz, setLinkz] = useState(links)
+
+  const showSidebar = () => {
+    setIsSidebarOpen(true)
+  }
+  const hideSidebar = () => {
+    setIsSidebarOpen(false)
+  }
 
   const fetchData = async () => {
     try {
@@ -21,7 +31,13 @@ const AppProvider = ({ children }) => {
     fetchData()
   }, [])
 
-  return <AppContext.Provider value={{ items }}>{children}</AppContext.Provider>
+  return (
+    <AppContext.Provider
+      value={{ items, isSidebarOpen, showSidebar, hideSidebar, linkz }}
+    >
+      {children}
+    </AppContext.Provider>
+  )
 }
 // make sure use
 export const useGlobalContext = () => {

@@ -87,6 +87,10 @@ const ReviewContainer = styled.article`
     margin: 0 auto;
     place-items: center;
     width: 30%;
+
+    @media (max-width: 630px) {
+      width: 50%;
+    }
   }
 
   .img-container {

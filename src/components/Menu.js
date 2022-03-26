@@ -37,12 +37,13 @@ const MenuContainer = styled.article`
   }
 
   .img {
-    /* max-width: 100%;
-    width: 20rem;
-    height: 20rem; */
     display: block;
-    width: 100%;
-    height: 20rem;
+
+    height: 20vh;
+
+    @media (max-width: 790px) {
+      height: 20vh;
+    }
   }
 
   .container:hover .img {

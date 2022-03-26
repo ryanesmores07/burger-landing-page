@@ -1,9 +1,9 @@
-import React from "react"
+import React, { useContext } from "react"
 import "../assets/css/main.css"
 import styled from "styled-components"
-import { Footer, Navbar } from "../components"
-import { AppProvider } from "../context"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { Footer, Navbar, Sidebar } from "../components"
+import { AppProvider, AppContext } from "../context"
+import { useGlobalContext } from "../context"
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
       <SectionCenter>
         <AppProvider>
           <Navbar />
+          <Sidebar />
           {children}
           <Footer />
         </AppProvider>
@@ -28,11 +29,10 @@ const Container = styled.main`
 `
 
 const SectionCenter = styled.section`
-  /* background-color: var(--clr-grey-10); */
   background-color: #fff;
   border-radius: 30px;
-  /* border: 0.1rem solid red; */
-  width: 90vw;
+
+  max-width: 90vw;
   z-index: 10;
 
   margin: 0 auto;

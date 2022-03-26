@@ -47,6 +47,12 @@ const MenuContainer = styled.section`
   align-content: center;
   grid-gap: 3rem;
 
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+
+    grid-row-gap: 8rem;
+  }
+
   .menu-card {
     /* background-color: yellow; */
     width: 100%;
@@ -54,6 +60,12 @@ const MenuContainer = styled.section`
     display: grid;
     align-content: start;
     justify-content: center;
+
+    @media (max-width: 640px) {
+      h3 {
+        font-size: 3rem;
+      }
+    }
 
     .img-burger {
       object-fit: cover;
@@ -67,6 +79,12 @@ const MenuContainer = styled.section`
       &:hover {
         transition: all 0.3s ease;
         opacity: 0.5;
+      }
+
+      @media (max-width: 40rem) {
+        width: 100vw;
+        height: 70vw;
+        margin-bottom: 1rem;
       }
     }
 

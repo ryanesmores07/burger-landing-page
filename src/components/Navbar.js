@@ -37,19 +37,26 @@ const Wrapper = styled.nav`
     display: grid;
     padding: 3rem 2rem;
     background-color: transparent;
-    grid-template-columns: repeat(3, minmax(15rem, 1fr));
+    /* grid-template-columns: repeat(2, minmax(15rem, 1fr)); */
+    grid-template-columns: 10% 1fr 10%;
+    justify-items: center;
+    align-items: end;
 
-    align-items: center;
+    /* @media (max-width: 600px) {
+      display: block;
+    } */
   }
 
   .nav-links {
     display: flex;
-    font-size: 2rem;
 
-    justify-self: center;
+    h3 {
+      font-size: 2rem;
+    }
 
     .link {
       margin: 0 2.5rem;
+      font-size: 3rem;
     }
 
     & a:hover {
@@ -61,6 +68,9 @@ const Wrapper = styled.nav`
   .logo {
     margin-left: 5rem;
     width: 7rem;
+
+    @media (max-width: 600px) {
+    }
   }
 `
 

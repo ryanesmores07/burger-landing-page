@@ -6,7 +6,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import SingleBurg from "../pages/menu/SingleBurg"
 import { Router as MyRouter } from "@reach/router"
-import { useParams } from "react-router-dom"
 
 const Burger = ({ name, description, image, ingredients, id }) => {
   const [items, setItems] = useState()
