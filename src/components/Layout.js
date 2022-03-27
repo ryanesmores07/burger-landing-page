@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <SectionCenter>
         <AppProvider>
           <Navbar />
-          <Sidebar />
+
           {children}
           <Footer />
         </AppProvider>

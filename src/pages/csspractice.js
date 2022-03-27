@@ -8,50 +8,43 @@ const csspractice = () => {
         <div className="intro-content">
           <h1>Lorem ipsum dolor sit.</h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod unde
-            rerum, deleniti ea obcaecati sint hic odit dicta tenetur qui ut
-            dolorum provident sit, atque, reprehenderit nulla voluptate!
-            Officiis, consectetur?
-          </p>
-          <p>
-            Iste ipsa enim delectus porro, ullam repellendus maiores quis rem
-            debitis cum, necessitatibus architecto dolor? Velit, ad quaerat
-            blanditiis veritatis expedita totam vel voluptatem officiis officia
-            ab modi voluptatibus obcaecati.
-          </p>
-          <p>
-            Accusantium minima iusto nobis fuga hic explicabo unde illum,
-            perferendis et animi aperiam quaerat, eaque deleniti alias
-            blanditiis exercitationem commodi repudiandae ullam consequatur
-            incidunt reiciendis repellat officia laboriosam. Esse, modi.
-          </p>
-          <p>
-            Expedita cupiditate iure odit, delectus placeat optio magnam
-            assumenda mollitia aspernatur at saepe nisi commodi natus excepturi
-            voluptate. Recusandae nisi dolorem, necessitatibus optio aliquam
-            repellat. Adipisci, incidunt. Consequuntur, natus nulla.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem aspernatur distinctio laudantium dolores. Nulla
+            quibusdam reprehenderit eum sit minus aliquid!
           </p>
         </div>
       </div>
+
+      <h2>more content D:</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
+        mollitia adipisci magnam voluptatibus repellendus fuga ut repellat
+        exercitationem eaque amet, omnis aliquam fugiat laudantium id dicta at?
+        Consectetur iure porro illum laudantium excepturi a laborum!
+      </p>
+      <p>
+        Sit magni soluta porro fugit placeat eius itaque, accusamus quisquam
+        voluptates reiciendis pariatur, vitae molestiae. Minima, quos
+        reprehenderit autem animi, nisi necessitatibus eligendi quis modi,
+        facilis ipsam nihil odit quaerat! Nisi doloribus harum culpa ipsam!
+      </p>
+      <p>
+        Sint corporis animi repudiandae. Aliquid illum, tenetur magnam provident
+        molestiae rem doloremque aspernatur quia reiciendis est facilis enim
+        praesentium officia sequi qui debitis exercitationem quaerat hic quos
+        recusandae. Architecto repudiandae aperiam tempora iste saepe error.
+      </p>
+      <p>
+        Provident aut suscipit aspernatur doloribus illum assumenda cupiditate
+        perferendis dolores! Obcaecati omnis magnam ipsam voluptas ipsa eos
+        explicabo quisquam architecto similique, sunt repellendus animi a
+        doloribus ab deserunt. Dicta neque nostrum modi, illum debitis dolorem.
+      </p>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  /* INSTRUCTIONS
- *
- * 1) Limit the total width of
- *    the .intro-conent to about half
- *    of it's parent
- *
- * 2) Stop the text from overflowing
- *    out the bottom at small screen
- *    widths
- *
- * You may modify the HTML if needed
- *
- */
-
   * {
     box-sizing: border-box;
   }
@@ -62,18 +55,32 @@ const Wrapper = styled.section`
   }
 
   .container {
+    /* width: 100vw; */
+    /* max-width: 750px; */
+    margin: 0 auto;
     background: #23424a;
     color: white;
-    font-size: 3rem;
-    width: 80%;
-    margin: 0 auto;
+    padding: 50px 0;
+  }
 
-    padding: 2em;
-    /* height: 300px; */
-
-    .intro-content {
-      width: 50%;
-    }
+  .intro-content {
+    width: 50%;
   }
 `
+
+/* INSTRUCTIONS
+ *
+ * 1) Keep the text inside .intro-content
+ *    in the same place, but have the background
+ *    extend from one side of the viewport
+ *    to the other, no matter how wide or narrow
+ *    the browser is.
+ *
+ * 2) Limit the maximum width of the text in the
+ *    bottom area.
+ *
+ * You may modify the HTML if needed
+ * (you probably should for this challenge)
+ *
+ */
 export default csspractice

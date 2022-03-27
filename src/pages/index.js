@@ -15,6 +15,7 @@ export default function Home({
   },
 }) {
   const { isSidebarOpen } = useContext(AppContext)
+  console.log(isSidebarOpen)
   return (
     <>
       <Content />

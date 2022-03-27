@@ -7,7 +7,7 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
   const [items, setItems] = useState([])
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [linkz, setLinkz] = useState(links)
 
   const showSidebar = () => {
