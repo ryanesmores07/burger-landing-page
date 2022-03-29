@@ -1,10 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import links from "../constants/links"
 import { Link } from "gatsby"
+import { GoThreeBars } from "react-icons/go"
 import { StaticImage } from "gatsby-plugin-image"
+import { AppContext } from "../context"
 
 const Navbar = () => {
+  const { isSidebarOpen, showSidebar } = useContext(AppContext)
+
   return (
     <Wrapper>
       <div className="grid-container">
@@ -25,6 +29,9 @@ const Navbar = () => {
             )
           })}
         </div>
+        <button className="toggle-btn" onClick={showSidebar}>
+          <GoThreeBars />
+        </button>
       </div>
     </Wrapper>
   )
@@ -40,11 +47,15 @@ const Wrapper = styled.nav`
     /* grid-template-columns: repeat(2, minmax(15rem, 1fr)); */
     grid-template-columns: 10% 1fr 10%;
     justify-items: center;
-    align-items: end;
+    align-items: center;
 
-    /* @media (max-width: 600px) {
-      display: block;
-    } */
+    @media (max-width: 700px) {
+      display: flex;
+      justify-content: flex-end;
+      padding: 2 0rem 2rem 3rem;
+    }
+    @media (max-width: 520px) {
+    }
   }
 
   .nav-links {
@@ -63,13 +74,41 @@ const Wrapper = styled.nav`
       color: var(--clr-primary-5);
       box-shadow: 0px 2px var(--clr-primary-5);
     }
+
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
 
   .logo {
-    margin-left: 5rem;
+    margin-left: 3rem;
     width: 7rem;
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+
+  .toggle-btn {
+    margin-right: 3rem;
+    width: 10vw;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border-radius: 2rem;
+    border: transparent;
+    color: var(--clr-white);
+    background: var(--clr-primary-5);
+    cursor: pointer;
+    transition: var(--transition);
+    &:hover {
+      background: var(--clr-primary-3);
+    }
+
+    @media (min-width: 701px) {
+      display: none;
     }
   }
 `

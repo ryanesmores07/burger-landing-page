@@ -10,7 +10,7 @@ const Title = ({ title }) => {
 }
 
 const TitleWrapper = styled.div`
-  width: 50rem;
+  width: 70%;
 
   margin: 5rem auto;
   text-align: center;

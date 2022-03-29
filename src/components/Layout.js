@@ -24,15 +24,20 @@ export default Layout
 
 const Container = styled.main`
   background-color: var(--clr-primary-3);
-
+  /* width: 100%; */
   padding: 3rem;
+  @media (max-width: 390px) {
+    padding: 1rem;
+    width: 100vw;
+  }
 `
 
 const SectionCenter = styled.section`
   background-color: #fff;
   border-radius: 30px;
+  max-width: 100%;
+  width: 100vw;
 
-  max-width: 90vw;
   z-index: 10;
 
   margin: 0 auto;

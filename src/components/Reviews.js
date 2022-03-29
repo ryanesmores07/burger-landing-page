@@ -91,6 +91,9 @@ const ReviewContainer = styled.article`
     @media (max-width: 630px) {
       width: 50%;
     }
+    @media (max-width: 391px) {
+      width: 50%;
+    }
   }
 
   .img-container {

@@ -19,7 +19,6 @@ export default function Home({
   return (
     <>
       <Content />
-
       {isSidebarOpen && <Sidebar />}
 
       <Menus data={data} />

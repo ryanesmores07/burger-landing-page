@@ -4,47 +4,35 @@ import styled from "styled-components"
 const csspractice = () => {
   return (
     <Wrapper>
-      <div className="container">
-        <div className="intro-content">
-          <h1>Lorem ipsum dolor sit.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Exercitationem aspernatur distinctio laudantium dolores. Nulla
-            quibusdam reprehenderit eum sit minus aliquid!
-          </p>
-        </div>
-      </div>
-
-      <h2>more content D:</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
-        mollitia adipisci magnam voluptatibus repellendus fuga ut repellat
-        exercitationem eaque amet, omnis aliquam fugiat laudantium id dicta at?
-        Consectetur iure porro illum laudantium excepturi a laborum!
-      </p>
-      <p>
-        Sit magni soluta porro fugit placeat eius itaque, accusamus quisquam
-        voluptates reiciendis pariatur, vitae molestiae. Minima, quos
-        reprehenderit autem animi, nisi necessitatibus eligendi quis modi,
-        facilis ipsam nihil odit quaerat! Nisi doloribus harum culpa ipsam!
-      </p>
-      <p>
-        Sint corporis animi repudiandae. Aliquid illum, tenetur magnam provident
-        molestiae rem doloremque aspernatur quia reiciendis est facilis enim
-        praesentium officia sequi qui debitis exercitationem quaerat hic quos
-        recusandae. Architecto repudiandae aperiam tempora iste saepe error.
-      </p>
-      <p>
-        Provident aut suscipit aspernatur doloribus illum assumenda cupiditate
-        perferendis dolores! Obcaecati omnis magnam ipsam voluptas ipsa eos
-        explicabo quisquam architecto similique, sunt repellendus animi a
-        doloribus ab deserunt. Dicta neque nostrum modi, illum debitis dolorem.
-      </p>
+      <section className="yawa">
+        <h1>responsive layouts dont have to be a struggle</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+          excepturi aliquam aperiam placeat repudiandae quidem harum nihil
+          perspiciatis exercitationem nulla asperiores iste quibusdam qui eum,
+          numquam ea omnis. Ullam sequi non enim asperiores nesciunt, delectus
+          officia facilis impedit tempore nihil est, corrupti, odio culpa sed
+          ipsa reprehenderit adipisci mollitia eius numquam exercitationem quam!
+          Aspernatur voluptatibus repudiandae deleniti eveniet veniam
+          voluptatem, expedita amet dolores molestiae cupiditate aut, distinctio
+          incidunt placeat delectus rem dignissimos labore veritatis soluta
+          sapiente assumenda. Dolorum, fuga nemo distinctio voluptates quam sit,
+          cupiditate aperiam odio ea nam placeat nesciunt tempore doloremque
+          corrupti dolores velit labore ullam dignissimos facilis.
+        </p>
+        <button>I WANT TO LEARN</button>
+      </section>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
+  width: 80%;
+  max-width: 750px;
+  margin: 0 auto;
+  background: #23424a;
+  color: white;
+  padding: 50px 10rem;
   * {
     box-sizing: border-box;
   }
@@ -53,18 +41,24 @@ const Wrapper = styled.section`
     margin: 0;
     font-family: sans-serif;
   }
-
-  .container {
-    /* width: 100vw; */
-    /* max-width: 750px; */
-    margin: 0 auto;
-    background: #23424a;
+  h1 {
+    font-size: 3rem;
+  }
+  p {
     color: white;
-    padding: 50px 0;
   }
 
-  .intro-content {
+  .yawa {
     width: 50%;
+  }
+
+  button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    color: #23424a;
+    font-weight: 700;
+    background-color: #38cfd9;
   }
 `
 

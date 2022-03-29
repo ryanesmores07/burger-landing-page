@@ -5,20 +5,20 @@ import { AppContext } from "../context"
 import { Link } from "gatsby"
 
 const Sidebar = () => {
-  const { linkz } = useContext(AppContext)
+  const { linkz, hideSidebar } = useContext(AppContext)
 
   return (
     <Wrapper>
       <div className="container">
-        <button>
+        <button onClick={hideSidebar}>
           <MdClose className="icon" />
         </button>
         <div className="links">
           {linkz.map((link, index) => {
             const { url, text, icon } = link
-            console.log(icon)
+
             return (
-              <Link to={url} key={index}>
+              <Link to={url} key={index} onClick={hideSidebar}>
                 {icon}
                 {text}
               </Link>
@@ -54,33 +54,35 @@ const Wrapper = styled.aside`
     padding: 4rem 2rem 2rem 2rem;
     button {
       position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
+      top: 1rem;
+      right: 1rem;
       background: transparent;
       border: transparent;
-      font-size: 2rem;
+      font-size: 4rem;
       cursor: pointer;
       color: var(--clr-grey-5);
     }
     .links {
       display: grid;
-      gap: 1rem 2rem;
+      margin-left: 3rem;
+      gap: 3rem 2rem;
       @media (min-width: 768px) {
-        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr; */
       }
       a {
         display: grid;
         grid-template-columns: auto 1fr;
         gap: 0.75rem;
-        grid-gap: 0.75rem;
+        grid-gap: 1.5rem;
+
         align-items: center;
         color: #0a2540;
         text-transform: capitalize;
         font-weight: 700;
-        font-size: 1.2rem;
+        font-size: 3rem;
         .icon {
           color: #88add2;
-          font-size: 2rem;
+          font-size: 4rem;
         }
         &:hover {
           color: #88add2;
