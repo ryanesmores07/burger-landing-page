@@ -4,10 +4,10 @@ import links from "../constants/links"
 import { Link } from "gatsby"
 import { GoThreeBars } from "react-icons/go"
 import { StaticImage } from "gatsby-plugin-image"
-import { AppContext } from "../context"
+import { useGlobalContext } from "../context"
 
 const Navbar = () => {
-  const { isSidebarOpen, showSidebar } = useContext(AppContext)
+  const { isSidebarOpen, showSidebar } = useGlobalContext()
 
   return (
     <Wrapper>
@@ -29,9 +29,11 @@ const Navbar = () => {
             )
           })}
         </div>
-        <button className="toggle-btn" onClick={showSidebar}>
-          <GoThreeBars />
-        </button>
+        {!isSidebarOpen && (
+          <button className="toggle-btn" onClick={showSidebar}>
+            <GoThreeBars />
+          </button>
+        )}
       </div>
     </Wrapper>
   )

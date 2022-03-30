@@ -41,9 +41,9 @@ const Wrapper = styled.aside`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (min-width: 791px) {
+  /* @media (min-width: 791px) {
     display: none;
-  }
+  } */
 
   .container {
     background: var(--clr-white);

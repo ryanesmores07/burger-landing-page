@@ -119,10 +119,17 @@ const ContentContainer = styled.header`
     @media (max-width: 790px) {
       display: flex;
       flex-direction: column;
+      /* margin: 0; */
     }
 
     @media (max-width: 945px) {
       grid-template-columns: 2% repeat(2, 1fr) 2%;
+    }
+
+    &:nth-child(4) {
+      @media (max-width: 790px) {
+        /* background-color: blue; */
+      }
     }
   }
 
@@ -133,8 +140,8 @@ const ContentContainer = styled.header`
     h1 {
       font-size: 3vmin;
 
-      @media (min-width: 1250px) {
-        font-size: 5rem;
+      @media (min-width: 800px) {
+        font-size: 4rem;
       }
 
       @media (max-width: 520px) {

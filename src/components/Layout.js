@@ -6,11 +6,13 @@ import { AppProvider, AppContext } from "../context"
 import { useGlobalContext } from "../context"
 
 const Layout = ({ children }) => {
+  // const { items } = useGlobalContext()
   return (
     <Container>
       <SectionCenter>
         <AppProvider>
           <Navbar />
+          {/* <Sidebar /> */}
 
           {children}
           <Footer />

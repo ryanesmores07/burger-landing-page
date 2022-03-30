@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import { RouteComponentProps } from "@reach/router"
 import styled from "styled-components"
 import Title from "../components/Title"
 import Loading from "../components/Loading"
+import Sidebar from "../components/Sidebar"
+import { useGlobalContext } from "../context"
 
 interface Props extends RouteComponentProps<{ id: string }> {}
 
 const SoloBurger: React.FC<Props> = ({ id }) => {
+  const { isSidebarOpen } = useGlobalContext()
   const [items, setItems] = useState()
 
   const [loading, setLoading] = useState(false)
@@ -39,23 +42,25 @@ const SoloBurger: React.FC<Props> = ({ id }) => {
     const { name, ingredients, description, image } = items
     return (
       <>
+        {isSidebarOpen && <Sidebar />}
         <Title title={name} />
         <Wrapper>
           <div className="grid-container">
             <img className="img-burger" src={image} alt="burger" />
 
             <div className="burger-info">
+              <h2>Description</h2>
               <div className="description">
-                <h2>Description</h2>
                 <h3>{description}</h3>
               </div>
+
+              <h2>Ingredients</h2>
               <div className="ingredients">
-                <h2>Ingredients</h2>
                 {ingredients.map(ingredient => {
                   return (
                     <ul>
                       <li>
-                        <h3>✅ {ingredient}</h3>
+                        <h3 className="ingredients-list">✅ {ingredient}</h3>
                       </li>
                     </ul>
                   )
@@ -72,30 +77,46 @@ const SoloBurger: React.FC<Props> = ({ id }) => {
 }
 
 const Wrapper = styled.article`
-  /* background-color: yellow; */
-  /* height: 50rem; */
-  max-width: 100vw;
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+
+  @media (max-width: 850px) {
+    max-width: 90%;
+  }
 
   .grid-container {
     /* background-color: lightblue; */
     /* height: 20rem; */
     display: grid;
     place-items: center;
-    background-color: var(--clr-grey-10);
-    /* width: 60vw; */
+    place-content: center;
+    /* background-color: var(--clr-grey-10); */
 
-    margin: 0 auto;
     grid-template-columns: repeat(2, minmax(25rem, 1fr));
     align-items: center;
     justify-items: start;
+
+    @media (max-width: 520px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .img-burger {
     object-fit: cover;
-    width: 100%;
-    height: 50vw;
-    /* height: 100%; */
+    width: 70vw;
+    height: 60vh;
     cursor: pointer;
+
+    @media (max-width: 850px) {
+      width: 90vw;
+      height: 40vh;
+    }
+
+    @media (max-width: 520px) {
+      max-height: 30vh;
+    }
 
     &:hover {
       transition: all 0.3s ease;
@@ -108,10 +129,27 @@ const Wrapper = styled.article`
     /* height: 100%; */
     padding: 1rem 2rem;
     display: grid;
-    grid-row-gap: 3rem;
+    grid-row-gap: 1rem;
     margin: 2rem 1rem;
-    h2 {
-      margin-bottom: 1.3rem;
+
+    @media (min-width: 600px) {
+      h2 {
+        font-size: 5vw;
+        margin-bottom: 0;
+      }
+      h3 {
+        font-size: 2vw;
+      }
+    }
+
+    @media (min-width: 1250px) {
+      h2 {
+        font-size: 4vw;
+        margin-bottom: 0;
+      }
+      h3 {
+        font-size: 1.5vw;
+      }
     }
   }
 `

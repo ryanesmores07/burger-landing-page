@@ -5,14 +5,16 @@ import { Title } from "../components"
 import { useGlobalContext } from "../context"
 import Burger from "../components/Burger"
 import SoloBurger from "../modules/SoloBurger"
-
+import Sidebar from "../components/Sidebar"
 import { Router as MyRouter } from "@reach/router"
 
 const Menu = () => {
-  const { items } = useGlobalContext()
+  const { items, isSidebarOpen } = useGlobalContext()
 
   return (
     <>
+      {isSidebarOpen && <Sidebar />}
+
       <Title title="Full burger menu" />
       <MenuContainer>
         {items.map((item, index) => {
