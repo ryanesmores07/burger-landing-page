@@ -44,15 +44,13 @@ const MenuContainer = styled.section`
   /* height: 100vh; */
   padding: 3rem 5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 10%));
   justify-content: center;
   align-content: center;
   grid-gap: 3rem;
 
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-
-    grid-row-gap: 8rem;
+  @media (max-width: 390px) {
+    grid-template-columns: 1fr 1fr;
   }
 
   .menu-card {
@@ -83,16 +81,25 @@ const MenuContainer = styled.section`
         opacity: 0.5;
       }
 
-      @media (max-width: 40rem) {
+      @media (max-width: 400px) {
         width: 100vw;
         height: 70vw;
         margin-bottom: 1rem;
+      }
+
+      @media (max-width: 390px) {
+        height: 20vh;
       }
     }
 
     .burger-info {
       text-align: center;
       align-self: start;
+      @media (max-width: 390px) {
+        h3 {
+          font-size: 2rem;
+        }
+      }
     }
   }
 `

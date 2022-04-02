@@ -27,9 +27,9 @@ export default Layout
 const Container = styled.main`
   background-color: var(--clr-primary-3);
   /* width: 100%; */
-  padding: 3rem;
-  @media (max-width: 390px) {
-    padding: 1rem;
+  padding: 1rem;
+  @media (min-width: 389px) {
+    padding: 2rem;
     width: 100vw;
   }
 `

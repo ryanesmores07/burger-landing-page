@@ -1,38 +1,79 @@
 import React from "react"
 import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
 const csspractice = () => {
   return (
     <Wrapper>
-      <section className="yawa">
-        <h1>responsive layouts dont have to be a struggle</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-          excepturi aliquam aperiam placeat repudiandae quidem harum nihil
-          perspiciatis exercitationem nulla asperiores iste quibusdam qui eum,
-          numquam ea omnis. Ullam sequi non enim asperiores nesciunt, delectus
-          officia facilis impedit tempore nihil est, corrupti, odio culpa sed
-          ipsa reprehenderit adipisci mollitia eius numquam exercitationem quam!
-          Aspernatur voluptatibus repudiandae deleniti eveniet veniam
-          voluptatem, expedita amet dolores molestiae cupiditate aut, distinctio
-          incidunt placeat delectus rem dignissimos labore veritatis soluta
-          sapiente assumenda. Dolorum, fuga nemo distinctio voluptates quam sit,
-          cupiditate aperiam odio ea nam placeat nesciunt tempore doloremque
-          corrupti dolores velit labore ullam dignissimos facilis.
-        </p>
-        <button>I WANT TO LEARN</button>
+      <section className="hero-container">
+        <div className="hero">
+          <h1>responsive layouts dont have to be a struggle</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            excepturi aliquam aperiam placeat repudiandae quidem harum nihil
+            perspiciatis exercitationem nulla asperiores iste quibusdam qui eum,
+            numquam ea omnis. Ullam sequi non enim
+          </p>
+          <button>I WANT TO LEARN</button>
+        </div>
+        <StaticImage
+          className="image"
+          src="../assets/images/hero.jpg"
+          alt="hero"
+        />
       </section>
+
+      <div className="flex-container">
+        <div className="flex-item1">
+          <h1>quality designs made custom, on demand, just for you</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
+            vel, placeat sint eum facilis, nesciunt eos illum vero ea
+            aspernatur, harum maiores odio distinctio animi dicta tempora
+            eligendi nostrum deleniti officia iusto dolorem. Fuga maxime qui
+            laudantium? Labore ratione ex obcaecati, veritatis officiis quam,
+            aspernatur, aliquam officia nisi quasi facere.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+            libero vitae nobis similique deleniti neque, sunt excepturi
+            distinctio, laudantium, officia exercitationem optio vel! Excepturi
+            optio at tenetur architecto, delectus ipsa!
+          </p>
+        </div>
+        <div className="flex-item2">
+          <h1>cheap</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit odio
+            adipisci est, optio maxime voluptatibus dicta quis voluptate
+            explicabo placeat.
+          </p>
+          <h1>quick</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit odio
+            adipisci est, optio maxime voluptatibus dicta quis voluptate
+            explicabo placeat.
+          </p>
+          <h1>quality</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit odio
+            adipisci est, optio maxime voluptatibus dicta quis voluptate
+            explicabo placeat.
+          </p>
+        </div>
+      </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  width: 80%;
+  width: 100%;
   max-width: 750px;
   margin: 0 auto;
-  background: #23424a;
+  border: 1px solid black;
+
   color: white;
-  padding: 50px 10rem;
+  /* padding: 50px 10rem; */
   * {
     box-sizing: border-box;
   }
@@ -48,8 +89,26 @@ const Wrapper = styled.section`
     color: white;
   }
 
-  .yawa {
-    width: 50%;
+  img {
+    max-width: 100%;
+  }
+
+  .hero-container {
+    display: flex;
+    background: #23424a;
+    width: 100%;
+    padding: 8rem 5rem;
+    justify-content: space-between;
+
+    .hero {
+      width: 60%;
+    }
+
+    .image {
+      width: 35%;
+
+      /* object-fit: cover; */
+    }
   }
 
   button {
@@ -59,6 +118,39 @@ const Wrapper = styled.section`
     color: #23424a;
     font-weight: 700;
     background-color: #38cfd9;
+  }
+
+  .flex-container {
+    background-color: white;
+    padding: 3rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+
+    & {
+      h1 {
+      }
+      p {
+      }
+    }
+
+    .flex-item1 {
+      width: 60%;
+      h1 {
+        color: #136c72;
+      }
+      p {
+        color: black;
+      }
+    }
+
+    .flex-item2 {
+      background-color: #136c72;
+      padding: 2rem;
+      text-align: center;
+      width: 35%;
+      /* margin: 3rem; */
+    }
   }
 `
 
