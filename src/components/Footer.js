@@ -51,9 +51,11 @@ const Footer = () => {
           </ul>
         </section>
         <section className="subscribe-section">
-          <h3>Get latest deals and promos</h3>
-          <input className="input" type="text"></input>
-          <button className="btn">Subscribe</button>
+          <div className="sub-info">
+            <h3>Get latest deals and promos</h3>
+            <input className="input" type="text"></input>
+            <button className="btn">Subscribe</button>
+          </div>
         </section>
       </div>
     </Wrapper>
@@ -61,48 +63,39 @@ const Footer = () => {
 }
 
 const Wrapper = styled.footer`
-width: 100%;
-margin: 0 auto;
-background-color: var(--clr-grey-9);
-border-bottom-left-radius: 30px;
-border-bottom-right-radius: 30px;
-
-
-.container {
-  /* width: 90%; */
-  max-width: 80vw;
+  width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 3% repeat(auto-fit, minmax(10%, 1fr)) 3%;
-  padding: 3rem;
-  place-items: center;
-  place-content: center;
-  font-size: 1.5rem;
-  align-items: start;
-  justify-items: center;
-  gap: 3rem;
- 
- 
-  @media (max-width: 1053px) {
-    /* display: flex;
+  background-color: var(--clr-grey-9);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  .container {
+    /* width: 90%; */
+    max-width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1% repeat(auto-fit, minmax(10%, 1fr)) 1%;
+    padding: 3rem 0;
+    place-items: center;
+    place-content: center;
+    font-size: 1.5rem;
+    align-items: start;
+    justify-items: center;
+    grid-gap: 3rem;
+
+    @media (max-width: 1053px) {
+      /* display: flex;
     align-items: flex-start; */
     }
-  
-  @media (max-width: 390px) {
-    grid-template-columns: 1fr;
-    
-    }
 
-}
+    @media (max-width: 390px) {
+      grid-template-columns: 1fr;
+    }
+  }
 
   & > * {
-      padding: 0 2rem;
-      flex: 1;
-      @media (max-width: 545px) {
-      }
-
-  @media (max-width: 475px) {
-    flex-basis: 50%;
+    padding: 0 2rem;
+    /* flex: 1; */
   }
 
   span {
@@ -112,15 +105,6 @@ border-bottom-right-radius: 30px;
   .logo-section {
     /* padding: 2rem 3rem; */
     grid-column: 2 / 3;
-
-    .logo {
-      margin-bottom: 2rem;
-      width: 5rem;
-    }
-
-    .logo-info {
-      width: 15rem;
-    }
   }
 
   .page-section {
@@ -132,7 +116,6 @@ border-bottom-right-radius: 30px;
   }
 
   .subscribe-section {
-    
     grid-column: 5 / 6;
   }
 
