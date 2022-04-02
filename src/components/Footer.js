@@ -61,7 +61,7 @@ const Footer = () => {
 }
 
 const Wrapper = styled.footer`
-width: 100vw;
+width: 100%;
 margin: 0 auto;
 background-color: var(--clr-grey-9);
 border-bottom-left-radius: 30px;
