@@ -41,6 +41,4 @@ const SectionCenter = styled.section`
   width: 100vw;
 
   z-index: 10;
-
-  /* margin: 0 auto; */
 `

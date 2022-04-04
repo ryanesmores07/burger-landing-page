@@ -107,6 +107,7 @@ const Wrapper = styled.article`
     object-fit: cover;
     width: 70vw;
     height: 60vh;
+    padding: 10rem 0;
     cursor: pointer;
 
     @media (max-width: 850px) {
@@ -127,7 +128,7 @@ const Wrapper = styled.article`
   .burger-info {
     /* background-color: pink; */
     /* height: 100%; */
-    padding: 1rem 2rem;
+    padding: 5rem 2rem;
     display: grid;
     grid-row-gap: 1rem;
     margin: 2rem 1rem;
