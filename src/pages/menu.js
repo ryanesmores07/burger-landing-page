@@ -44,13 +44,13 @@ const MenuContainer = styled.section`
   /* height: 100vh; */
   padding: 3rem 5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 10%));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 10%));
   justify-content: center;
   align-content: center;
   grid-gap: 3rem;
 
   @media (max-width: 390px) {
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
   }
 
   .menu-card {
