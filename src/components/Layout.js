@@ -28,7 +28,7 @@ const Container = styled.main`
   background-color: var(--clr-primary-3);
   /* width: 100%; */
   padding: 3rem;
-  @media (max-width: 390px) {
+  @media (max-width: 520px) {
     padding: 1rem;
     /* width: 100%; */
   }

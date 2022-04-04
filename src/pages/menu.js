@@ -49,7 +49,7 @@ const MenuContainer = styled.section`
   align-content: center;
   grid-gap: 3rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 520px) {
     grid-template-columns: 1fr 1fr;
   }
 
