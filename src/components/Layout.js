@@ -30,7 +30,7 @@ const Container = styled.main`
   padding: 3rem;
   @media (max-width: 390px) {
     padding: 1rem;
-    width: 100%;
+    /* width: 100%; */
   }
 `
 
@@ -42,5 +42,5 @@ const SectionCenter = styled.section`
 
   z-index: 10;
 
-  margin: 0 auto;
+  /* margin: 0 auto; */
 `

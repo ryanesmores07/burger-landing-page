@@ -81,14 +81,10 @@ const MenuContainer = styled.section`
         opacity: 0.5;
       }
 
-      @media (max-width: 400px) {
-        width: 100vw;
-        height: 70vw;
-        margin-bottom: 1rem;
-      }
-
       @media (max-width: 390px) {
+        width: 100vw;
         height: 20vh;
+        margin-bottom: 1rem;
       }
     }
 
