@@ -10,8 +10,8 @@ const Footer = () => {
         <section className="logo-section">
           <div className="logo-info">
             <p>
-              <span>BoogerBurger</span> is a fast food delivery service with the
-              fastest service
+              <strong>BoogerBurger </strong>
+              is a fast food delivery service with the fastest service
             </p>
           </div>
         </section>
@@ -52,7 +52,7 @@ const Footer = () => {
         <section className="subscribe-section">
           <div className="sub-info">
             <h3>Get latest deals and promos</h3>
-            <input className="input" type="text"></input>
+            <input className="input" type="email"></input>
             <button className="btn">Subscribe</button>
           </div>
         </section>
@@ -87,7 +87,7 @@ const Wrapper = styled.footer`
       /* flex: 1; */
     }
 
-    @media (max-width: 390px) {
+    @media (max-width: 520px) {
       font-size: 2rem;
     }
 
@@ -95,10 +95,6 @@ const Wrapper = styled.footer`
       /* display: flex;
     align-items: flex-start; */
     }
-  }
-
-  span {
-    font-weight: bold;
   }
 
   .logo-section {

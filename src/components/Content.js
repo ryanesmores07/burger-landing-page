@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const Content = () => {
   return (
@@ -21,7 +22,9 @@ const Content = () => {
             can get them all at BoogerBurger
           </p>
 
-          <button className="btn">Order burger</button>
+          <Link className="btn" type="button" to="/menu">
+            Order burger
+          </Link>
         </div>
         <div className="images">
           <StaticImage

@@ -5,6 +5,27 @@ import { StaticImage } from "gatsby-plugin-image"
 const csspractice = () => {
   return (
     <Wrapper>
+      <header>
+        <nav className="nav">
+          <ul className="nav-list">
+            <li className="nav-item">
+              <a href="">HOME</a>
+            </li>
+            <li className="nav-item">
+              <a href="">ABOUT</a>
+            </li>
+            <li className="nav-item">
+              <a href="">CONTACT</a>
+            </li>
+            <li className="nav-item">
+              <a href="">SIGN IN</a>
+            </li>
+            <li className="nav-item">
+              <button>SIGN UP</button>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <section className="hero-container">
         <div className="hero">
           <h1>responsive layouts dont have to be a struggle</h1>
@@ -77,7 +98,9 @@ const Wrapper = styled.section`
   * {
     box-sizing: border-box;
   }
-
+  a {
+    color: #fff;
+  }
   body {
     margin: 0;
     font-family: sans-serif;
@@ -91,6 +114,22 @@ const Wrapper = styled.section`
 
   img {
     max-width: 100%;
+  }
+
+  .nav {
+    background-color: #136c72;
+    width: 100%;
+
+    .nav-list {
+      display: flex;
+      padding: 1rem 5rem;
+      align-items: center;
+      width: 60%;
+
+      & > * {
+        flex: auto;
+      }
+    }
   }
 
   .hero-container {
