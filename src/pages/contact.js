@@ -1,12 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 import Title from "../components/Title"
+import Sidebar from "../components/Sidebar"
+import { useGlobalContext } from "../context"
 
-const contact = () => {
+const Contact = () => {
+  const { items, isSidebarOpen } = useGlobalContext()
+
   return (
-    <Wrapper>
-      <Title title="Contact" />
-    </Wrapper>
+    <>
+      {isSidebarOpen && <Sidebar />}
+      <Wrapper>
+        <Title title="Contact" />
+      </Wrapper>
+    </>
   )
 }
 
@@ -14,4 +21,4 @@ const Wrapper = styled.article`
   width: 80%;
   margin: 0 auto;
 `
-export default contact
+export default Contact

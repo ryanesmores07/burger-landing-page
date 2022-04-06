@@ -2,40 +2,46 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Title from "../components/Title"
+import Sidebar from "../components/Sidebar"
+import { useGlobalContext } from "../context"
 
-const about = () => {
+const About = () => {
+  const { items, isSidebarOpen } = useGlobalContext()
   return (
-    <Wrapper>
-      <div className="container">
-        <Title title="Company Profile" />
-        <div className="grid-container">
-          <h2>Company Name:</h2>
-          <h3>BoogerBurger Japan Co., Ltd.</h3>
-          <h2>Home page:</h2>
-          <a href="https://boogerburger.netlify.app/">
-            https://boogerburger.netlify.app/
-          </a>
-          <h2>Location:</h2>
-          <h3>
-            Shinjuku Island Tower, 6-5-1 Nishi-Shinjuku, Shinjuku-ku, Tokyo
-            163-1339
-          </h3>
-          <h2>Date of establishment:</h2>
-          <h3>
-            July 01, 2002 (newly established at the time of transition to the
-            holding company system)
-          </h3>
-          <h2>Capital:</h2>
-          <h3>100 million yen</h3>
+    <>
+      {isSidebarOpen && <Sidebar />}
+      <Wrapper>
+        <div className="container">
+          <Title title="Company Profile" />
+          <div className="grid-container">
+            <h2>Company Name:</h2>
+            <h3>BoogerBurger Japan Co., Ltd.</h3>
+            <h2>Home page:</h2>
+            <a href="https://boogerburger.netlify.app/">
+              https://boogerburger.netlify.app/
+            </a>
+            <h2>Location:</h2>
+            <h3>
+              Shinjuku Island Tower, 6-5-1 Nishi-Shinjuku, Shinjuku-ku, Tokyo
+              163-1339
+            </h3>
+            <h2>Date of establishment:</h2>
+            <h3>
+              July 01, 2002 (newly established at the time of transition to the
+              holding company system)
+            </h3>
+            <h2>Capital:</h2>
+            <h3>100 million yen</h3>
+          </div>
         </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </>
   )
 }
 
 const Wrapper = styled.article`
   /* background-color: pink; */
-  width: 70vw;
+  width: 80vw;
   padding-bottom: 5vh;
   margin: 0 auto;
 
@@ -48,18 +54,19 @@ const Wrapper = styled.article`
     display: grid;
     grid-template-columns: 20% 1fr;
     align-items: center;
-    grid-gap: 2rem;
+    grid-gap: 2rem 4rem;
     padding: 2rem;
     border: 1px solid black;
-    justify-content: center;
+    justify-content: space-between;
 
     h2 {
       font-weight: bold;
-      font-size: 3vmin;
+      font-size: 2vmin;
     }
     h3 {
       /* font-weight: 600; */
-      font-size: 2vmin;
+      font-size: 1.6vmin;
+      font-weight: 400;
     }
 
     a {
@@ -69,11 +76,11 @@ const Wrapper = styled.article`
     @media (max-width: 890px) {
       h2 {
         font-weight: bold;
-        font-size: 2.5vmin;
+        font-size: 1.7vmin;
       }
       h3 {
         font-weight: 400;
-        font-size: 1.5vmax;
+        font-size: 1.3vmin;
       }
 
       a {
@@ -83,11 +90,11 @@ const Wrapper = styled.article`
     @media (max-width: 600px) {
       h2 {
         font-weight: bold;
-        font-size: 1.5vmin;
+        font-size: 1.8vmin;
       }
       h3 {
         font-weight: 400;
-        font-size: 1.5vmax;
+        font-size: 1.5vmin;
       }
 
       a {
@@ -95,6 +102,7 @@ const Wrapper = styled.article`
       }
     }
     @media (max-width: 390px) {
+      padding: 1rem;
       grid-gap: 1rem;
       h2 {
         font-weight: bold;
@@ -112,4 +120,4 @@ const Wrapper = styled.article`
   }
 `
 
-export default about
+export default About

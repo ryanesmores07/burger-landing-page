@@ -15,12 +15,12 @@ const data = [
     url: "/menu/",
     icon: <MdRestaurantMenu className="icon" />,
   },
-  {
-    id: 3,
-    text: "Contact",
-    url: "/contact/",
-    icon: <MdContactMail className="icon" />,
-  },
+  // {
+  //   id: 3,
+  //   text: "Contact",
+  //   url: "/contact/",
+  //   icon: <MdContactMail className="icon" />,
+  // },
   {
     id: 4,
     text: "About us",

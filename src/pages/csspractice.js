@@ -1,30 +1,48 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import logo from "../../static/logo.svg"
 
 const csspractice = () => {
   return (
     <Wrapper>
       <header>
-        <nav className="nav">
-          <ul className="nav-list">
-            <li className="nav-item">
-              <a href="">HOME</a>
-            </li>
-            <li className="nav-item">
-              <a href="">ABOUT</a>
-            </li>
-            <li className="nav-item">
-              <a href="">CONTACT</a>
-            </li>
-            <li className="nav-item">
-              <a href="">SIGN IN</a>
-            </li>
-            <li className="nav-item">
-              <button>SIGN UP</button>
-            </li>
-          </ul>
-        </nav>
+        <div className="container row">
+          <a className="logo" href="#">
+            <img src={logo} alt="logosss" />
+          </a>
+          <nav className="nav">
+            <ul className="nav-list nav-primary">
+              <li className="nav-item">
+                <a href="#" className="nav__link">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav__link">
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav__link">
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <ul className="nav-list nav-secondary">
+              <li className="nav-item">
+                <a href="#" className="nav__link">
+                  Sign In
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link btn">
+                  Sign up
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
       <section className="hero-container">
         <div className="hero">
@@ -88,13 +106,14 @@ const csspractice = () => {
 }
 
 const Wrapper = styled.section`
+  background-color: #136c72;
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
   border: 1px solid black;
 
   color: white;
-  /* padding: 50px 10rem; */
+
   * {
     box-sizing: border-box;
   }
@@ -116,19 +135,42 @@ const Wrapper = styled.section`
     max-width: 100%;
   }
 
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container {
+    padding: 1rem 5rem;
+  }
+
+  .logo {
+    margin-right: 2rem;
+  }
+
   .nav {
     background-color: #136c72;
-    width: 100%;
+    /* width: 100%; */
+    flex-grow: 1;
+
+    display: flex;
+
+    justify-content: space-between;
 
     .nav-list {
       display: flex;
-      padding: 1rem 5rem;
+
       align-items: center;
-      width: 60%;
+      width: 30%;
 
       & > * {
         flex: auto;
       }
+    }
+
+    .nav-primary {
+      /* border: 1px solid pink; */
+      margin: 0 auto;
     }
   }
 
@@ -150,13 +192,15 @@ const Wrapper = styled.section`
     }
   }
 
-  button {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    border-radius: 25px;
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
     color: #23424a;
-    font-weight: 700;
+    font-weight: 900;
     background-color: #38cfd9;
+    padding: 0.75em 2em;
+    border-radius: 100px;
   }
 
   .flex-container {
