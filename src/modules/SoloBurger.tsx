@@ -49,13 +49,13 @@ const SoloBurger: React.FC<Props> = ({ id }) => {
             <img className="img-burger" src={image} alt="burger" />
 
             <div className="burger-info">
-              <h2>Description</h2>
               <div className="description">
+                <h2>Description</h2>
                 <h3>{description}</h3>
               </div>
 
-              <h2>Ingredients</h2>
               <div className="ingredients">
+                <h2>Ingredients</h2>
                 {ingredients.map(ingredient => {
                   return (
                     <ul>
@@ -95,11 +95,11 @@ const Wrapper = styled.article`
 
     grid-template-columns: repeat(2, minmax(25rem, 1fr));
     align-items: center;
-    justify-items: start;
 
     @media (max-width: 520px) {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 
@@ -116,7 +116,8 @@ const Wrapper = styled.article`
     }
 
     @media (max-width: 520px) {
-      max-height: 30vh;
+      max-height: 50vh;
+      padding: 0;
     }
 
     &:hover {
@@ -133,10 +134,12 @@ const Wrapper = styled.article`
     grid-row-gap: 1rem;
     margin: 2rem 1rem;
 
-    @media (min-width: 600px) {
+    @media (max-width: 520px) {
+      padding: 0 2rem;
+
       h2 {
         font-size: 5vw;
-        margin-bottom: 0;
+        margin-bottom: 0.5rem;
       }
       h3 {
         font-size: 2vw;
